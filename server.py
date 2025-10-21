@@ -7,7 +7,7 @@ def ping():
     data = request.get_json()
     message = data.get("message") if data else None  # читаем сообщение
 
-    if message == "Hello":
+    if message.lower() == "hello":
         reply = "World!"
     else:
         reply = "неверное слово"
